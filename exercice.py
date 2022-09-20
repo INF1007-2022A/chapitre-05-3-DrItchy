@@ -35,7 +35,7 @@ def format_horizontal_histogram(histogram):
     LINE_CHAR = "¯"
     m,l=max(histogram),""
     while m!=0:
-        for i in range(len(histogram)):
+        for i in range(1,len(histogram)):
             if histogram[i]>=m:
                 l+=BLOCK_CHAR
             else:
@@ -43,7 +43,7 @@ def format_horizontal_histogram(histogram):
         print(l)
         l=""
         m-=1
-    print(LINE_CHAR*len(histogram))
+    print(LINE_CHAR*(len(histogram)-1))
 
 
 if __name__ == "__main__":
